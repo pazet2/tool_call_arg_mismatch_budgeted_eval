@@ -1,4 +1,4 @@
-# agent_loop_budgeted_evaluation_10709b47
+# tool_call_arg_mismatch_budgeted_eval
 
 （大模型推理场景）工具调用的参数错配的噪声会不会盖住真实差异？用调用轨迹与终止比较噪声幅度与效应幅度。
 
@@ -15,9 +15,9 @@
 仅依赖 Python 标准库。
 
 ```bash
-python agent_loop_budgeted_evaluation_10709b47.py --help
-python agent_loop_budgeted_evaluation_10709b47.py --input sample.txt
-python agent_loop_budgeted_evaluation_10709b47.py --input sample.txt --json
+python tool_call_arg_mismatch_budgeted_eval.py --help
+python tool_call_arg_mismatch_budgeted_eval.py --input sample.txt
+python tool_call_arg_mismatch_budgeted_eval.py --input sample.txt --json
 ```
 
 输入文件按行解析。协议「预算内评测」使用分隔符 `,` 区分标签与载荷。
@@ -50,7 +50,7 @@ python agent_loop_budgeted_evaluation_10709b47.py --input sample.txt --json
 ## 复现步骤
 
 1. 按上面的分隔符准备输入文件，每行一条样本；
-2. 运行 `python agent_loop_budgeted_evaluation_10709b47.py --input sample.txt --json`；
+2. 运行 `python tool_call_arg_mismatch_budgeted_eval.py --input sample.txt --json`；
 3. 记录运行环境、输入文件与完整输出；
 4. **未运行的指标不要引用**：本仓库只提供测量方法与判定规则，
    不预填任何实测数字。填入实测值前请确认对应命令与输入一致。
